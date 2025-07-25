@@ -75,13 +75,14 @@ Admin dashboard to manage enquiries
 
 MongoDB database for storing leads and enquiries
 
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/Mudabbirarafat/mern-gym-website.git
-cd mern-gym-website
-
 ###🧑‍💻 Author
 Mohd Mudabbir Arafat
 📍 Lucknow, Uttar Pradesh
 https://github.com/dashboard
+
+### 1. Clone the repository
+
+```bashgit clone https://github.com/Mudabbirarafat/mern-gym-website.git
+cd mern-gym-website
+
+
