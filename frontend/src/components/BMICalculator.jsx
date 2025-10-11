@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { toast } from "react-toastify";
 
 const BMICalculator = () => {
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
   const [gender, setGender] = useState("");
-  const [bmi, setBmi] = useState("");
+  const [, setBmi] = useState("");
 
   const calculateBMI = (e) => {
     e.preventDefault();
@@ -21,15 +21,15 @@ const BMICalculator = () => {
 
     if (bmiValue < 18.5) {
       toast.warning(
-        "You are underweight. Consider seeking advide from a healthcare provider."
+        "You are underweight. Consider seeking advice from a healthcare provider."
       );
     } else if (bmiValue >= 18.5 && bmiValue < 24.9) {
       toast.success(
-        "You have normal weight. Keep maintaing a healthy lifestyle."
+        "You have normal weight. Keep maintaining a healthy lifestyle."
       );
     } else if (bmiValue >= 25 && bmiValue < 29.9) {
       toast.warning(
-        "You are overweight. Consider seeking advide from a healthcare provider."
+        "You are overweight. Consider seeking advice from a healthcare provider."
       );
     } else {
       toast.error(
