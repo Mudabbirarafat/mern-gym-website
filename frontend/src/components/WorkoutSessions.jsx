@@ -1,5 +1,3 @@
-import React from "react";
-
 const WorkoutSessions = () => {
   return (
     <section className="workout_session">

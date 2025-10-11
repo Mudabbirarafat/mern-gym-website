@@ -1,5 +1,3 @@
-import React from "react";
-
 const Gallery = () => {
   const gallery = [
     "/img1.webp",
