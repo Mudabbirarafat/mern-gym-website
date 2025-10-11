@@ -1,5 +1,3 @@
-import React from "react";
-
 const Hero = () => {
   // Scroll to section by ID
   const scrollToSection = (id) => {
@@ -13,7 +11,7 @@ const Hero = () => {
     <section className="hero">
       <div className="content">
         <div className="title">
-          <h1>LET'S</h1>
+          <h1>LET&apos;S</h1>
           <h1>GET</h1>
           <h1>MOVING</h1>
         </div>
