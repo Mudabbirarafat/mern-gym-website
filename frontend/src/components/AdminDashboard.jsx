@@ -39,7 +39,10 @@ const AdminDashboard = () => {
 
   const fetchDashboardData = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/api/dashboard/stats");
+      const res = await axios.get("https://mern-gym-backend.up.railway.app/api/dashboard/stats", {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      
       setStats(res.data.stats);
       setRecentUsers(res.data.recentUsers);
       setRecentContacts(res.data.recentContacts);
