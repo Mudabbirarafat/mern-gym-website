@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { API_URL } from "../api";
 import { toast } from "react-toastify";
 import { ClipLoader } from "react-spinners";
 import {
@@ -39,7 +40,7 @@ const AdminDashboard = () => {
 
   const fetchDashboardData = async () => {
     try {
-      const res = await axios.get("https://mern-gym-backend.up.railway.app/api/dashboard/stats", {
+      const res = await axios.get(`${API_URL}/api/dashboard/stats`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       
@@ -55,7 +56,7 @@ const AdminDashboard = () => {
 
   const updateContactStatus = async (contactId, status) => {
     try {
-      await axios.put(`http://localhost:4000/api/contacts/${contactId}`, { status });
+      await axios.put(`${API_URL}/api/contacts/${contactId}`, { status });
       toast.success("Contact status updated");
       fetchDashboardData();
     } catch (error) {

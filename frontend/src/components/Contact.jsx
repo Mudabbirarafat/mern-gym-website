@@ -1,4 +1,5 @@
 import axios from "axios";
+import { API_URL } from "../api";
 import React, { useState } from "react";
 import { ClipLoader } from "react-spinners";
 import { toast } from "react-toastify";
@@ -15,7 +16,7 @@ const Contact = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/send/mail", // ✅ Make sure this matches backend port
+        `${API_URL}/send/mail`, // ✅ Make sure this matches backend port
         { name, email, message },
         {
           withCredentials: true,

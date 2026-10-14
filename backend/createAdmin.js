@@ -6,13 +6,20 @@ import { config } from "dotenv";
 config({ path: "./config.env" });
 
 const createAdminUser = async () => {
+  const email = process.env.ADMIN_EMAIL;
+  const password = process.env.ADMIN_PASSWORD;
+  if (!email || !password) {
+    console.error("Set ADMIN_EMAIL and ADMIN_PASSWORD in config.env first");
+    process.exit(1);
+  }
+
   try {
     // Connect to MongoDB
     await mongoose.connect(process.env.MONGODB_URI);
     console.log("Connected to MongoDB");
 
     // Check if admin already exists
-    const existingAdmin = await User.findOne({ email: "admin@gym.com" });
+    const existingAdmin = await User.findOne({ email });
     if (existingAdmin) {
       console.log("Admin user already exists");
       return;
@@ -21,8 +28,8 @@ const createAdminUser = async () => {
     // Create admin user
     const adminUser = await User.create({
       name: "Admin User",
-      email: "admin@gym.com",
-      password: "admin123",
+      email,
+      password,
       role: "admin",
       membershipType: "vip",
       phone: "123-456-7890",
@@ -30,8 +37,7 @@ const createAdminUser = async () => {
     });
 
     console.log("Admin user created successfully:");
-    console.log("Email: admin@gym.com");
-    console.log("Password: admin123");
+    console.log(`Email: ${email}`);
     console.log("Role: admin");
 
   } catch (error) {

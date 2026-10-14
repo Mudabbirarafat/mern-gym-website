@@ -93,10 +93,7 @@ After starting the application, you can create an admin user by:
 1. Register a new account through the website
 2. Or manually create one in the database with `role: "admin"`
 
-**Test Admin Credentials:**
-- Email: `admin@gym.com`
-- Password: `admin123`
-- Role: `admin`
+**Seeding an admin:** set `ADMIN_EMAIL` and `ADMIN_PASSWORD` in `backend/config.env`, then run `node createAdmin.js` from `backend/`.
 
 ## 🎯 Features
 
