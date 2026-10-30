@@ -1,5 +1,7 @@
 # MERN Gym Website - Complete Setup Guide
 
+[![CI](https://github.com/Mudabbirarafat/mern-gym-website/actions/workflows/ci.yml/badge.svg)](https://github.com/Mudabbirarafat/mern-gym-website/actions/workflows/ci.yml)
+
 ## 🏋️‍♂️ Project Overview
 
 This is a complete MERN (MongoDB, Express.js, React, Node.js) gym website with:
